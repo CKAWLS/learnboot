@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./datepicker.css">
+</head>
+
+<body>
+    <form action="" method="POST">
+        <input class="" id="d">
+        <input class="" id="s" autocomplete="off">
+    </form>
+    <script src="./rome.js"></script>
+    <script>
+        var moment = rome.moment;
+        rome(d,
+            {
+                // dateValidator: function (d) {
+                //     var m = moment(d);
+                //     var y = m.year();
+                //     var f = 'MM-DD';
+                //     var start = moment('12-21', f).year(y).startOf('day');
+                //     var end = moment('03-19', f).year(y).endOf('day');   
+                //     return m.isBefore(start) && m.isAfter(end);
+                // },
+                time: false,
+                min: '2021-02-15',
+                max: '2021-11-01',
+                monthFormat: "YYYY年MM月",
+                dayFormat: 'D',
+                inputFormat: 'YYYY/MM/DD',
+                weekdayFormat: ['日', '月', '火', '水', '木', '金', '土'],
+                weekStart: moment().weekday(0).day()
+            });
+
+        rome(s, {});
+    </script>
+</body>
+
+</html>
