@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.ckawls.learnboot.mapper")
 public class LearnbootApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(LearnbootApplication.class, args);
 	}
-
 }

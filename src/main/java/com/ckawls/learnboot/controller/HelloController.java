@@ -17,8 +17,10 @@ public class HelloController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Book hello(@PathVariable("id") Integer id) {
         Book book = new Book();
+        book.setPrice(Math.random()*10);
         book.setDate(new Date());
         book.setId(id);
+        book.setAuthor("JK");
         return book;
     }
 
